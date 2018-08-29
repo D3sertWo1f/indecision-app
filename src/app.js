@@ -7,7 +7,7 @@ class IndecisionApp extends React.Component {
       <div>
         <Header title={title} subtitle={subtitle}/>
         <Action />
-        <Options />
+        <Options options={options}/>
         <AddOption />
       </div>
     );
@@ -38,10 +38,10 @@ class Action extends React.Component {
 
 class Options extends React.Component {
   render() {
+    console.log(this.props.options)
     return(
       <div>
-        <p>Options Component Here</p>
-        <Option />
+        {this.props.options.map((option) => <Option optionText={option} key={option}/>)}
       </div>
     );
   }
@@ -49,9 +49,10 @@ class Options extends React.Component {
 
 class Option extends React.Component{
   render() {
+    console.log(this.props)
     return (
       <div>
-        <p>Option Component Heres</p>
+        {this.props.optionText}
       </div>
     );
   }
