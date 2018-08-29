@@ -38,7 +38,6 @@ class Action extends React.Component {
 
 class Options extends React.Component {
   render() {
-    console.log(this.props.options)
     return(
       <div>
         {this.props.options.map((option) => <Option optionText={option} key={option}/>)}
@@ -49,7 +48,6 @@ class Options extends React.Component {
 
 class Option extends React.Component{
   render() {
-    console.log(this.props)
     return (
       <div>
         {this.props.optionText}

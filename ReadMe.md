@@ -1,3 +1,5 @@
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
 - How to make a react website from 0
 
 - install nodejs -> nodejs.org

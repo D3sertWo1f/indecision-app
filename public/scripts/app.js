@@ -108,7 +108,6 @@ var Options = function (_React$Component4) {
   _createClass(Options, [{
     key: 'render',
     value: function render() {
-      console.log(this.props.options);
       return React.createElement(
         'div',
         null,
@@ -134,7 +133,6 @@ var Option = function (_React$Component5) {
   _createClass(Option, [{
     key: 'render',
     value: function render() {
-      console.log(this.props);
       return React.createElement(
         'div',
         null,
