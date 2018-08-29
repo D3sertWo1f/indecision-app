@@ -83,13 +83,9 @@ var Options = function (_React$Component3) {
         'div',
         null,
         React.createElement(
-          'ol',
+          'p',
           null,
-          React.createElement(
-            'p',
-            null,
-            'Options Component Here'
-          )
+          'Options Component Here'
         )
       );
     }
@@ -114,13 +110,9 @@ var AddOption = function (_React$Component4) {
         'div',
         null,
         React.createElement(
-          'form',
+          'p',
           null,
-          React.createElement(
-            'p',
-            null,
-            'Add option component here'
-          )
+          'Add option component here'
         )
       );
     }
