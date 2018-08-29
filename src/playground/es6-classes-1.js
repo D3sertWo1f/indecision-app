@@ -14,15 +14,47 @@ class Person {
   }
 }
 
-const me = new Person('Adolf', 30)
-console.log(me)
+class Student extends Person{
+  constructor(name, age, major){
+    super(name, age);
+    this.major = major
+  }
+
+  hasMajor(){
+    return !!this.major
+  }
+
+  getDescription(){
+    let description = super.getDescription()
+
+    if(this.hasMajor()){
+    return description += ` Their major is ${this.major}`
+    }
+    return description
+  }
+}
+
+class Traveler extends Person {
+  constructor(name, age, homeLocation) {
+    super(name, age)
+    this.homeLocation = homeLocation;
+  }
+  getGreeting(){
+    let greeting = super.getGreeting()
+    if(this.homeLocation){
+      return greeting += ` I'm visiting from ${this.homeLocation}`
+    }
+    return greeting
+  }
+}
+
+const me = new Traveler('Adolf', 30, 'Mexico City')
 console.log(me.getGreeting())
 
-const him = new Person(undefined , 29)
-console.log(him)
+const him = new Traveler(undefined , 29)
 console.log(him.getGreeting())
 
 
-var max = new Person('Max', 0)
-console.log(max)
-console.log(max.getDescription())
+// var max = new Student('Max', 0)
+// console.log(max)
+// console.log(max.getDescription())
