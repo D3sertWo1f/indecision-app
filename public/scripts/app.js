@@ -112,13 +112,37 @@ var Options = function (_React$Component4) {
           'p',
           null,
           'Options Component Here'
-        )
+        ),
+        React.createElement(Option, null)
       );
     }
   }]);
 
   return Options;
 }(React.Component);
+
+var Option = function () {
+  function Option() {
+    _classCallCheck(this, Option);
+  }
+
+  _createClass(Option, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          'p',
+          null,
+          'Option Component Heres'
+        )
+      );
+    }
+  }]);
+
+  return Option;
+}();
 
 var AddOption = function (_React$Component5) {
   _inherits(AddOption, _React$Component5);
