@@ -4,14 +4,13 @@ class Person {
     this.age = age
   }
 
-  getGreeting(){
-    return 'Hi! I am ' + this.name
-  }
+    getGreeting(){
+      return 'Hi! I am ' + this.name
+    }
 
-  getDescription(){
-
-    return `${this.name} is ${this.age} year${this.age === 1?  '':"s"} old`
-  }
+    getDescription(){
+      return `${this.name} is ${this.age} year${this.age === 1?  '':"s"} old`
+    }
 }
 
 class Student extends Person{
@@ -20,18 +19,18 @@ class Student extends Person{
     this.major = major
   }
 
-  hasMajor(){
-    return !!this.major
-  }
-
-  getDescription(){
-    let description = super.getDescription()
-
-    if(this.hasMajor()){
-    return description += ` Their major is ${this.major}`
+    hasMajor(){
+      return !!this.major
     }
-    return description
-  }
+
+    getDescription(){
+      let description = super.getDescription()
+
+      if(this.hasMajor()){
+        return description += ` Their major is ${this.major}`
+      }
+      return description
+    }
 }
 
 class Traveler extends Person {
@@ -39,13 +38,14 @@ class Traveler extends Person {
     super(name, age)
     this.homeLocation = homeLocation;
   }
-  getGreeting(){
-    let greeting = super.getGreeting()
-    if(this.homeLocation){
-      greeting += ` I'm visiting from ${this.homeLocation}.`;
+
+    getGreeting(){
+      let greeting = super.getGreeting()
+      if(this.homeLocation){
+        greeting += ` I'm visiting from ${this.homeLocation}.`;
+      }
+      return greeting
     }
-    return greeting
-  }
 }
 
 const me = new Traveler('Adolf', 30, 'Mexico City')
