@@ -63,14 +63,6 @@ const Header = (props) => {
   );
 }
 
-// class Header extends React.Component {
-//   render() {
-//     return  (
-//
-//     );
-//   }
-// }
-
 const Action = (props) => {
   return(
     <div>
@@ -79,39 +71,16 @@ const Action = (props) => {
   );
 }
 
-// class Action extends React.Component {
-//   render() {
-//     return(
-//       <div>
-//         <button disabled={!this.props.hasOptions} onClick={this.props.handlePick}>What should I do?</button>
-//       </div>
-//     );
-//   }
-// }
-
 const Options = (props) => {
   return(
     <div>
       <button onClick={props.handleDeleteOptions}>Remove All</button>
       {
-        props.options.map((option) => <Option optionText={option} key={option}/>)
+        props.options.map((option, index) => <Option optionText={option} key={index}/>)
       }
     </div>
   );
 }
-
-// class Options extends React.Component {
-//   render() {
-//     return(
-//       <div>
-//         <button onClick={this.props.handleDeleteOptions}>Remove All</button>
-//         {
-//           this.props.options.map((option) => <Option optionText={option} key={option}/>)
-//         }
-//       </div>
-//     );
-//   }
-// }
 
 const Option = (props) => {
   return(
@@ -122,18 +91,6 @@ const Option = (props) => {
     </div>
   );
 }
-
-// class Option extends React.Component{
-//   render() {
-//     return (
-//       <div>
-//         {
-//           this.props.optionText
-//         }
-//       </div>
-//     );
-//   }
-// }
 
 class AddOption extends React.Component {
   constructor(props){
@@ -165,7 +122,5 @@ class AddOption extends React.Component {
     );
   }
 }
-
-
 
 ReactDOM.render(<IndecisionApp />,document.getElementById('app'))
