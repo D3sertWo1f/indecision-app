@@ -5,8 +5,8 @@ class Counter extends React.Component {
   this.handleMinusOne = this.handleMinusOne.bind(this)
   this.handleReset = this.handleReset.bind(this)
   this.state = {
-    count: 0
-  };
+    count: props.count
+    };
   }
 
   handleAddOne(){
@@ -44,6 +44,10 @@ class Counter extends React.Component {
     );
   }
 }
+//Conditional default prop passes to this.state if no direct value its given inside render
+Counter.defaultProps = {
+  count: 0
+};
 
 ReactDOM.render(<Counter/>, document.getElementById('app'))
 
